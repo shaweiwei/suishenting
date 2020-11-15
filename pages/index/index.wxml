@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class='item'>
+    <text>这里是歌名</text>
+    <image class='audio_post{{music_on?" music_on":""}}'  style="animation-play-state:{{music_playing?'running':'paused'}}" src='http://091275.com/wp-content/uploads/2020/10/Complicated-超复杂.jpg'></image>
+ 
+    <view class='audio_progress'>
+      <slider block-size='14' activeColor="#bfbfbf" bindchange='audioChange' bindchanging='audioChanging' value='{{sliderValue}}'></slider>
+      <view>{{musicTime}}</view>
+    </view>
+
+    <view>
+      <image src="../../icons/play.png" class="musicCompenent" bindtap="playMusic"></image>
+      <image src="../../icons/suspend.png" class="musicCompenent" bindtap="pauseMusic"></image>
+    </view>
+
+    <view class='audio_control'>
+      
+      <!-- <button type='primary' bindtap='playMusic' plain="true" class="play_button">播放</button>
+      <button type='primary' bindtap='pauseMusic'>暂停</button>
+      <button type='primary' bindtap='stopMusic'>停止</button> -->
+    </view>
+</view>
